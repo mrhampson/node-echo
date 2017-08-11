@@ -5,7 +5,7 @@
   "main": "node-echo.js",
   "bin" : {
     "node-echo-server" : "node-echo.js"
-  }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
