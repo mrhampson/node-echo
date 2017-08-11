@@ -1,5 +1,5 @@
 {
-  "name": "node-ehco",
+  "name": "node-echo",
   "version": "0.1.0",
   "description": "Simple echo server",
   "main": "node-echo.js",
