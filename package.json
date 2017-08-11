@@ -1,7 +1,7 @@
 {
-  "name": "node-echo",
+  "name": "node-echo-server",
   "version": "0.1.0",
-  "description": "Simple echo server",
+  "description": "Simple echo server that logs requests to the command line for testing.",
   "main": "node-echo.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
