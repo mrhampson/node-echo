@@ -1,0 +1,25 @@
+{
+  "name": "node-ehco",
+  "version": "0.1.0",
+  "description": "Simple echo server",
+  "main": "node-echo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "echo",
+    "server",
+    "echo-server",
+    "http",
+    "https"
+  ],
+  "author": "Marshall Hampson",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "~8.0.2"
+},
+  "repository": {
+      "type": "git",
+      "url" : "https://github.com/mrhampson/node-echo"
+  }
+}
