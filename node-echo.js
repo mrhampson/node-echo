@@ -30,13 +30,27 @@ http.createServer(function(request, response) {
   })
   .on('end', (chunk) => {
     body = Buffer.concat(body).toString();
+    console.log("Headers")
     console.log(prettyjson.render(request.headers));
-    console.log(prettyjson.render(body));
+    console.log("Body")
+    console.log(prettyFormatRequestBody(body));
   });
   response.writeHead(200);
   request.pipe(response);
 }).listen(portNum);
 console.log('Server listening on port ' + portNum)
+
+function prettyFormatRequestBody(requestBody) {
+  try {
+    if (typeof body !== "undefined") {
+      var bodyAsObject = JSON.parse(body);
+      return prettyjson.render(bodyAsObject);
+    }
+  } catch (e) {
+    // ignore non json body formats
+  }
+  return requestBody;
+}
 
 function isValidPortNum(portNum) {
   return portNum != null && portNum >= 0 && portNum <= 65536;
