@@ -44,7 +44,7 @@ function prettyFormatRequestBody(requestBody) {
   try {
     if (typeof body !== "undefined") {
       var bodyAsObject = JSON.parse(body);
-      return prettyjson.render(bodyAsObject);
+      return prettyjson.render(bodyAsObject, {usePlatformEol: true});
     }
   } catch (e) {
     // ignore non json body formats
