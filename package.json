@@ -1,6 +1,6 @@
 {
   "name": "node-echo-server",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Simple echo server that logs requests to the command line for testing.",
   "main": "node-echo.js",
   "bin": {
