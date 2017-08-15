@@ -2,6 +2,7 @@
 
 const http = require('http');
 const yargs = require('yargs');
+const prettyjson = require('prettyjson')
 
 const argv = yargs
   .option('port', {
@@ -19,6 +20,7 @@ if (!isValidPortNum(portNum)) {
 }
 
 http.createServer(function(request, response) {
+  console.log("Received request . . .")
   let body = [];
   request.on('error', (error) => {
     console.error(error);
@@ -28,8 +30,8 @@ http.createServer(function(request, response) {
   })
   .on('end', (chunk) => {
     body = Buffer.concat(body).toString();
-    console.log(request.headers);
-    console.log(body);
+    console.log(prettyjson.render(request.headers));
+    console.log(prettyjson.render(body));
   });
   response.writeHead(200);
   request.pipe(response);
